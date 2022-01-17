@@ -44,6 +44,9 @@ public class LoginServlet extends HttpServlet {
                 view.forward(req, resp);
             }
 
+            RequestDispatcher view = req.getRequestDispatcher("/");
+            view.forward(req, resp);
+
             transaction.commit();
         } finally {
             if (transaction.isActive()) {
