@@ -1,7 +1,15 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: MHAMDI
+  Date: 1/17/2022
+  Time: 10:57 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Register</title>
+    <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
@@ -14,41 +22,44 @@
         <div class="row justify-content-center">
             <div class="col-md-7 col-lg-5">
                 <div class="wrap">
-                    <div class="img" style="background-image:url(assets/login/images/trees.jpg)"></div>
+                    <div class="img" style="background-image:url(assets/login/images/xbg-1.jpg.pagespeed.ic.EtoN2PmO7Y.webp)"></div>
                     <div class="login-wrap p-4 p-md-5">
                         <div class="d-flex">
                             <div class="w-100">
-                                <h3 class="mb-4">Register</h3>
+                                <h3 class="mb-4">Login</h3>
                             </div>
                         </div>
-                        <form action="register" method="post" class="signin-form">
+                        <form action="login" method="post" class="signin-form">
                             <div class="form-group mt-3">
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <input type="text" class="form-control" id="email" name="email" required>
                                 <label class="form-control-placeholder" for="email">Email</label>
-                            </div>
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="firstName" id="firstName" required>
-                                <label class="form-control-placeholder" for="firstName">firstName</label>
-                            </div>
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="lastName" id="lastName" required>
-                                <label class="form-control-placeholder" for="lastName">LastName</label>
                             </div>
                             <div class="form-group">
                                 <input id="password-field" type="password" id="password" name="password" class="form-control" required>
                                 <label class="form-control-placeholder" for="password">Password</label>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
+                            <% if (((String) request.getAttribute("error")) == "wrong credentials") { %>
+                                <div class="text-danger mb-3" style="margin-top: -1em;">
+                                    Wrong credentials.
+                                </div>
+                            <% } %>
                             <div class="form-group">
-                                <input id="password-confirm" type="password" id="password-confirm" name="passwordConfirm" class="form-control" required>
-                                <label class="form-control-placeholder" for="password">Password Confirm</label>
-                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Register</button>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a href="#">Forgot Password</a>
+                                </div>
                             </div>
                         </form>
-                        <p class="text-center">Already a member? <a data-toggle="tab" href="login">Login</a></p>
+                        <p class="text-center">Not a member? <a data-toggle="tab" href="register">Register</a></p>
                     </div>
                 </div>
             </div>

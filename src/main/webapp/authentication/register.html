@@ -21,26 +21,26 @@
                                 <h3 class="mb-4">Register</h3>
                             </div>
                         </div>
-                        <form method="post" class="signin-form">
+                        <form action="register" method="post" class="signin-form">
                             <div class="form-group mt-3">
-                                <input type="email" class="form-control" id="username" required>
-                                <label class="form-control-placeholder" for="username">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <label class="form-control-placeholder" for="email">Email</label>
                             </div>
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control" id="firstName" required>
+                                <input type="text" class="form-control" name="firstName" id="firstName" required>
                                 <label class="form-control-placeholder" for="firstName">firstName</label>
                             </div>
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control" id="lastName" required>
+                                <input type="text" class="form-control" name="lastName" id="lastName" required>
                                 <label class="form-control-placeholder" for="lastName">LastName</label>
                             </div>
                             <div class="form-group">
-                                <input id="password-field" type="password" id="password" class="form-control" required>
+                                <input id="password-field" type="password" id="password" name="password" class="form-control" required>
                                 <label class="form-control-placeholder" for="password">Password</label>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                             <div class="form-group">
-                                <input id="password-confirm" type="password" id="password-confirm" class="form-control" required>
+                                <input id="password-confirm" type="password" id="password-confirm" name="passwordConfirm" class="form-control" required>
                                 <label class="form-control-placeholder" for="password">Password Confirm</label>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
