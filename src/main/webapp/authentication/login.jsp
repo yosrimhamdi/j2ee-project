@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/login/css/A.style.css.pagespeed.cf.AxmTFBrhes.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/assets/login/css/A.style.css.pagespeed.cf.AxmTFBrhes.css">
 </head>
 <body>
 <section class="ftco-section" style="padding: 2em">
@@ -66,8 +66,8 @@
         </div>
     </div>
 </section>
-<script src="assets/login/js/jquery.min.js"></script>
-<script src="assets/login/js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.3YxqA_kpjO.js">
+<script src="<%= request.getContextPath() %>/assets/login/js/jquery.min.js"></script>
+<script src="<%= request.getContextPath() %>/assets/login/js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.3YxqA_kpjO.js">
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6cf1d88fec17c00c","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>
