@@ -30,6 +30,11 @@
                             </div>
                         </div>
                         <form action="login" method="post" class="signin-form">
+                            <% if (((String) request.getAttribute("success")) == "account created") { %>
+                                <div class="text-success">
+                                    Account created.
+                                </div>
+                            <% } %>
                             <div class="form-group mt-3">
                                 <input type="text" class="form-control" id="email" name="email" required>
                                 <label class="form-control-placeholder" for="email">Email</label>

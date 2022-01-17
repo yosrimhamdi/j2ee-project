@@ -41,6 +41,11 @@ public class RegisterServlet extends HttpServlet {
 
             entityManager.persist(user);
 
+            req.setAttribute("success", "account created");
+
+            RequestDispatcher view = req.getRequestDispatcher("authentication/login.jsp");
+            view.forward(req, resp);
+
             transaction.commit();
         } finally {
             if (transaction.isActive()) {

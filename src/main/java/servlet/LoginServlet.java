@@ -44,8 +44,7 @@ public class LoginServlet extends HttpServlet {
                 view.forward(req, resp);
             }
 
-            RequestDispatcher view = req.getRequestDispatcher("index.jsp");
-            view.forward(req, resp);
+            resp.sendRedirect(req.getContextPath());
 
             transaction.commit();
         } finally {
