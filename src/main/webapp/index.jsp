@@ -40,7 +40,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-4">
-                    <h1 class="m-0 site-logo"><a href="index.html">Services</a></h1>
+                    <h1 class="m-0 site-logo"><a href="<%= request.getContextPath() %>/">Eventify</a></h1>
                 </div>
                 <div class="col-8">
                     <nav
@@ -56,13 +56,21 @@
                     d-none d-lg-block
                   "
                         >
-                            <li><a href="#home-section" class="nav-link">Home</a></li>
                             <li><a href="#about-section" class="nav-link">About</a></li>
                             <li>
                                 <a href="#blog-section" class="nav-link">Recent Events</a>
                             </li>
                             <li>
                                 <a href="#contact-section" class="nav-link">Contact</a>
+                            </li>
+                            <li>
+                                <a href="<%= request.getContextPath() %>/login" class="nav-link">Login</a>
+                            </li>
+                            <li>
+                                <a href="<%= request.getContextPath() %>/register" class="nav-link">Register</a>
+                            </li>
+                            <li>
+                                <a href="<%= request.getContextPath() %>/admin/events/new" class="nav-link">Create new event</a>
                             </li>
                         </ul>
                     </nav>
@@ -106,7 +114,7 @@
                                 <a
                                         href="#services-section"
                                         class="btn smoothscroll btn-primary"
-                                >Our Services</a
+                                >View all events</a
                                 >
                             </p>
                         </div>
