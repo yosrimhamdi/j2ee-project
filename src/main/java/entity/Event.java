@@ -1,7 +1,7 @@
 package entity;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 @Entity
 @Table(name = "events", schema = "j2ee_project")
@@ -18,7 +18,7 @@ public class Event {
     private String description;
     @Basic
     @Column(name = "occurs_at")
-    private Timestamp occursAt;
+    private Date occursAt;
     @Basic
     @Column(name = "address")
     private String address;
@@ -53,11 +53,11 @@ public class Event {
         this.description = description;
     }
 
-    public Timestamp getOccursAt() {
+    public Date getOccursAt() {
         return occursAt;
     }
 
-    public void setOccursAt(Timestamp occursAt) {
+    public void setOccursAt(Date occursAt) {
         this.occursAt = occursAt;
     }
 
