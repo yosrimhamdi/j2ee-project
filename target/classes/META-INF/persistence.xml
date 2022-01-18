@@ -6,6 +6,8 @@
     <persistence-unit name="default">
 
         <class>entity.User</class>
+        <class>entity.Event</class>
+        <class>entity.Event</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/j2ee_project"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
