@@ -45,7 +45,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <h1 class="text-white" data-aos="fade-up" data-aos-delay="">
-                                We Are Digital Services
+                                More than 200 events per month!
                             </h1>
                             <p
                                     class="lead text-white"
