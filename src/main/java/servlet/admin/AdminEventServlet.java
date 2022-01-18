@@ -12,10 +12,9 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
-import java.sql.Timestamp;
 
-@WebServlet(name = "EventServlet", value = "/admin/events/new")
-public class EventServlet extends HttpServlet {
+@WebServlet(name = "AdminEventServlet", value = "/admin/events/new")
+public class AdminEventServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher view = req.getRequestDispatcher("../../events/new.jsp");
