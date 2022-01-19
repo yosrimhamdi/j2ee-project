@@ -16,15 +16,22 @@
                         <li>
                             <a href="<%= request.getContextPath() %>/events" class="nav-link">Events Catalog</a>
                         </li>
-                        <li>
-                            <a href="<%= request.getContextPath() %>/admin/events" class="nav-link">Events dashboard</a>
-                        </li>
-                        <li>
-                            <a href="<%= request.getContextPath() %>/login" class="nav-link">Login</a>
-                        </li>
-                        <li>
-                            <a href="<%= request.getContextPath() %>/register" class="nav-link">Register</a>
-                        </li>
+                        <% session = request.getSession(false); %>
+                        <% if (session.getAttribute("email") == null) { %>
+                            <li>
+                                <a href="<%= request.getContextPath() %>/login" class="nav-link">Login</a>
+                            </li>
+                            <li>
+                                <a href="<%= request.getContextPath() %>/register" class="nav-link">Register</a>
+                            </li>
+                        <% } else { %>
+                            <li>
+                                <a href="<%= request.getContextPath() %>/admin/dashboard" class="nav-link">Events dashboard</a>
+                            </li>
+                            <li>
+                                <a href="<%= request.getContextPath() %>/logout" class="nav-link">Logout</a>
+                            </li>
+                        <% } %>
                     </ul>
                 </nav>
                 <a href="#" class="

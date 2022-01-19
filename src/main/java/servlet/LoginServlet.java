@@ -43,9 +43,18 @@ public class LoginServlet extends HttpServlet {
 
                 RequestDispatcher view = req.getRequestDispatcher("authentication/login.jsp");
                 view.forward(req, resp);
+
+                return;
             }
 
-            resp.sendRedirect(req.getContextPath());
+            HttpSession session = req.getSession();
+
+            session.setAttribute("isLoggedIn", true);
+            session.setAttribute("email", users.get(0).getEmail());
+            session.setAttribute("firstName", users.get(0).getFirstName());
+            session.setAttribute("lastName", users.get(0).getLastName());
+
+            resp.sendRedirect(req.getContextPath() + "/admin/dashboard");
 
             transaction.commit();
         } finally {

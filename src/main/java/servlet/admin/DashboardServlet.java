@@ -9,8 +9,8 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "EventDashboardServlet", value = "/admin/events")
-public class AdminEventServlet extends HttpServlet {
+@WebServlet(name = "EventDashboardServlet", value = "/admin/dashboard")
+public class DashboardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ArrayList<Event> events = DBConnection.findEvents();
