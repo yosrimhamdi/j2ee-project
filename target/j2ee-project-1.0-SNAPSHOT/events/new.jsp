@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="<%= request.getContextPath() %>/assets/events/css/A.style.css.pagespeed.cf.Qh1-GdQdyh.css">
 </head>
 <body>
-<jsp:include page="../visible-header.jsp" />
+<jsp:include page="../components/visible-header.jsp" />
 <section class="ftco-section">
     <div class="container" style="padding-top: 10px">
         <div class="row justify-content-center">

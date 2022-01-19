@@ -33,7 +33,7 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <jsp:include page="header.jsp" />
+    <jsp:include page="components/header.jsp" />
     <div
             class="site-blocks-cover overlay bg-light"
             style="background-image: url(<%= request.getContextPath() %>/assets/home/images/test.jpg)"

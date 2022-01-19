@@ -58,7 +58,7 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <jsp:include page="../visible-header.jsp" />
+    <jsp:include page="../components/visible-header.jsp" />
     <section class="site-section bg-light" id="blog-section">
         <div class="container">
             <div class="row">
@@ -241,7 +241,7 @@
             </div>
         </div>
     </footer>
-    <jsp:include page="../toastr.jsp" />
+    <jsp:include page="../components/toastr.jsp" />
 </div>
 <script src="<%= request.getContextPath() %>/assets/home/js/jquery-3.3.1.min.js"></script>
 <script src="<%= request.getContextPath() %>/assets/home/js/jquery-ui.js+popper.min.js.pagespeed.jc.EX-s8Bt7Bv.js"></script>
