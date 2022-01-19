@@ -1,3 +1,5 @@
+<%@ page import="entity.Event" %>
+<%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
   User: MHAMDI
@@ -11,6 +13,14 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Hello</h1>
 
+<%
+    ArrayList<Event> events = (ArrayList<Event>)request.getAttribute("events");
+
+    for(Event event : events) {
+%>
+        <div><%= event.getTitle() %></div>
+<% } %>
 </body>
 </html>
