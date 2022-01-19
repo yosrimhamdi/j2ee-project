@@ -79,4 +79,59 @@ public class DBConnection {
             System.out.println(e.getMessage());
         }
     }
+
+    public static Event findEvent(String id) {
+        Event event = new Event();
+
+        try{
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
+            Statement stmt = conn.createStatement();
+
+            ResultSet rset = stmt.executeQuery("SELECT * FROM events WHERE id = " + id);
+
+            while(rset.next()) {
+
+
+                event.setId(rset.getInt("id"));
+                event.setTitle(rset.getString("title"));
+                event.setDescription(rset.getString("description"));
+                event.setOccursAt(rset.getDate("occurs_at"));
+                event.setImageUrl(rset.getString("image_url"));
+                event.setAddress(rset.getString("address"));
+            }
+
+            rset.close();
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return event;
+    }
+
+    public static void updateEvent(Event event) {
+        try{
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
+            PreparedStatement stmt = conn.prepareStatement("UPDATE events SET title = ?, description = ?, occurs_at = ?, address = ?, image_url = ? WHERE id = ?");
+
+            stmt.setString(1, event.getTitle());
+            stmt.setString(2, event.getDescription());
+            stmt.setDate(3, event.getOccursAt());
+            stmt.setString(4, event.getAddress());
+            stmt.setString(5, event.getImageUrl());
+            stmt.setInt(6, event.getId());
+
+            stmt.executeUpdate();
+
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
