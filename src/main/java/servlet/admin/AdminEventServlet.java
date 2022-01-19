@@ -1,5 +1,6 @@
 package servlet.admin;
 
+import database.DBConnection;
 import entity.Event;
 
 import javax.persistence.EntityManager;
@@ -36,26 +37,8 @@ public class AdminEventServlet extends HttpServlet {
         event.setImageUrl(imageUrl);
         event.setOccursAt(Date.valueOf(occursAt));
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = entityManager.getTransaction();
+        DBConnection dbConnection = new DBConnection();
 
-        try {
-            transaction.begin();
-
-            entityManager.persist(event);
-
-            transaction.commit();
-        } finally {
-            if (transaction.isActive()) {
-                transaction.rollback();
-            }
-
-            entityManager.close();
-            entityManagerFactory.close();
-        }
-
-        PrintWriter out = response.getWriter();
-        out.println(occursAt);
+        dbConnection.createEvent(event);
     }
 }

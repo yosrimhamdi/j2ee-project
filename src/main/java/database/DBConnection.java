@@ -39,4 +39,26 @@ public class DBConnection {
 
         return events;
     }
+
+    public void createEvent(Event event) {
+        try{
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO events(title, description, occurs_at, address, image_url) VALUES(?, ?, ?, ?,?)");
+
+            stmt.setString(1, event.getTitle());
+            stmt.setString(2, event.getDescription());
+            stmt.setDate(3, event.getOccursAt());
+            stmt.setString(4, event.getAddress());
+            stmt.setString(5, event.getImageUrl());
+
+            stmt.executeUpdate();
+
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
