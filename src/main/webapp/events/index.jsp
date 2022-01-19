@@ -77,6 +77,7 @@
                                         src="<%= event.getImageUrl() %>"
                                         alt="Image"
                                         class="img-fluid"
+                                        style="width: 350px; height: 200px; object-fit: cover;"
                                 /></a>
                                 <div class="p-4 bg-white">
                                     <h3>

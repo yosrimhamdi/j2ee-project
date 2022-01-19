@@ -58,6 +58,7 @@
         </div>
     </div>
 </section>
+<jsp:include page="../components/footer.jsp" />
 <script src="<%= request.getContextPath() %>/assets/events/js/jquery.min.js"></script>
 <script src="<%= request.getContextPath() %>/assets/events/js/popper.js+bootstrap.min.js+main.js.pagespeed.jc.JD3obyg0WD.js"></script>
 </body>
