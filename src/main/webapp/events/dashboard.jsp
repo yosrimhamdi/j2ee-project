@@ -51,6 +51,15 @@
             background-color: #c82333;
             color: white !important;
         }
+
+        .green {
+            background-color: #28a745;
+        }
+
+        .green:hover {
+            background-color: #218838;
+            color: white;
+        }
     </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -68,6 +77,9 @@
         <div class="container">
             <div class="col-12 mb-5 position-relative">
                 <h2 class="section-title text-center mb-5">Event Manager</h2>
+            </div>
+            <div style="text-align: right;">
+                <a href="<%= request.getContextPath() %>/admin/events/new" type="button" class="button green" style="margin-bottom: 2em; margin-right: 1.6em;">New Event</a>
             </div>
             <table class="table table-dark">
                 <thead>
@@ -89,7 +101,11 @@
                         <tr>
                             <td><img style="width: 60px" src="<%= event.getImageUrl() %>" alt="event image"/></td>
                             <td><%= event.getTitle() %></td>
-                            <td><%= event.getDescription().substring(0, 20) + "..." %></td>
+                            <td>
+                                <% if (event.getDescription().length() > 23) {%>
+                                    <%= event.getDescription().substring(0, 20) + "..." %>
+                                <% } %>
+                            </td>
                             <td><%= event.getAddress() %></td>
                             <td><%= event.getOccursAt() %></td>
                             <td>
