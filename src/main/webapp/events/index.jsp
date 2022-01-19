@@ -239,6 +239,7 @@
             </div>
         </div>
     </footer>
+    <jsp:include page="../toastr.jsp" />
 </div>
 <script src="<%= request.getContextPath() %>/assets/home/js/jquery-3.3.1.min.js"></script>
 <script src="<%= request.getContextPath() %>/assets/home/js/jquery-ui.js+popper.min.js.pagespeed.jc.EX-s8Bt7Bv.js"></script>

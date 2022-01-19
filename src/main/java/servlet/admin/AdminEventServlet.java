@@ -38,5 +38,11 @@ public class AdminEventServlet extends HttpServlet {
         event.setOccursAt(Date.valueOf(occursAt));
 
         DBConnection.createEvent(event);
+
+        request.setAttribute("hasToastr", true);
+        request.setAttribute("toastrMessage", "Event created.");
+
+        RequestDispatcher view = request.getRequestDispatcher("/events");
+        view.forward(request, response);
     }
 }

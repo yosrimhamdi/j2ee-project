@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-5 position-relative">
-                    <h2 class="section-title text-center mb-5">Recent Events</h2>
+                    <h2 class="section-title text-center mb-5">Events Catalog</h2>
                 </div>
                 <%
                     ArrayList<Event> events = (ArrayList<Event>)request.getAttribute("events");
@@ -239,6 +239,7 @@
             </div>
         </div>
     </footer>
+    <jsp:include page="../toastr.jsp" />
 </div>
 <script src="<%= request.getContextPath() %>/assets/home/js/jquery-3.3.1.min.js"></script>
 <script src="<%= request.getContextPath() %>/assets/home/js/jquery-ui.js+popper.min.js.pagespeed.jc.EX-s8Bt7Bv.js"></script>
