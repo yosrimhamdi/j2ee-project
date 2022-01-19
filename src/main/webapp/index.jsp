@@ -58,7 +58,7 @@
                             </p>
                             <p data-aos="fade-up" data-aos-delay="200">
                                 <a
-                                        href="#services-section"
+                                        href="<%= request.getContextPath() %>/events"
                                         class="btn smoothscroll btn-primary"
                                 >View all events</a
                                 >

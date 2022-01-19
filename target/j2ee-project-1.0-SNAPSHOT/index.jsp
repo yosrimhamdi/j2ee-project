@@ -58,7 +58,7 @@
                             </p>
                             <p data-aos="fade-up" data-aos-delay="200">
                                 <a
-                                        href="#services-section"
+                                        href="<%= request.getContextPath() %>/events"
                                         class="btn smoothscroll btn-primary"
                                 >View all events</a
                                 >
@@ -181,7 +181,6 @@
                                 A small river named Duden flows by their place and supplies
                                 it with the necessary regelialia.
                             </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
                         </div>
                     </div>
                 </div>
@@ -204,7 +203,6 @@
                                 A small river named Duden flows by their place and supplies
                                 it with the necessary regelialia.
                             </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
                         </div>
                     </div>
                 </div>
@@ -227,7 +225,6 @@
                                 A small river named Duden flows by their place and supplies
                                 it with the necessary regelialia.
                             </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
                         </div>
                     </div>
                 </div>

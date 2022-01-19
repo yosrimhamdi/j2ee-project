@@ -58,7 +58,7 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <jsp:include page="../header.jsp" />
+    <jsp:include page="../visible-header.jsp" />
     <section class="site-section bg-light" id="blog-section">
         <div class="container">
             <div class="row">
