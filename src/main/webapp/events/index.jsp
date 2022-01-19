@@ -84,7 +84,8 @@
                                         <a href="#"
                                         ><%= event.getTitle() %></a>
                                     </h3>
-                                    <span class="date"><%= event.getOccursAt() %></span>
+                                    <span class="date" ><%= event.getAddress() %></span>
+                                    <span class="date" style="margin-top: -1em"><%= event.getOccursAt() %></span>
                                     <p><%= event.getDescription() %></p>
                                 </div>
                             </div>
