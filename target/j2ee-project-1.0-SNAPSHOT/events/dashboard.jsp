@@ -41,6 +41,7 @@
 
         .button:hover {
             background-color: #0069d9;
+            color: white !important;
         }
 
         .red {
@@ -72,7 +73,7 @@
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-    <jsp:include page="../components/visible-header.jsp" />
+    <jsp:include page="../components/header.jsp" />
     <section class="site-section bg-light" id="blog-section">
         <div class="container">
             <div class="col-12 mb-5 position-relative">

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/login/css/A.style.css.pagespeed.cf.AxmTFBrhes.css">
 </head>
 <body>
-<jsp:include page="../components/visible-header.jsp" />
+<jsp:include page="../components/header.jsp" />
 <section class="ftco-section" style="padding: 2em">
     <div class="container" style="padding-top: 90px">
         <div class="row justify-content-center">
