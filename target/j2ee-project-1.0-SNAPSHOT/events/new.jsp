@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="description">Discription</label>
-                                <input type="text" class="form-control" id="description" name="description" placeholder="description" required>
+                                <textarea class="form-control" id="description" name="description" placeholder="description" required></textarea>
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="occursAt">Occurs at</label>
