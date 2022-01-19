@@ -24,17 +24,37 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
-        User user = DBConnection.login(email, password);
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
 
-        if (user == null) {
-            req.setAttribute("error", "wrong credentials");
+        try {
+            transaction.begin();
 
-            RequestDispatcher view = req.getRequestDispatcher("authentication/login.jsp");
-            view.forward(req, resp);
+            PrintWriter out = resp.getWriter();
 
-            return;
+            Query query = entityManager.createQuery("SELECT e FROM User e WHERE e.email = :email and e.password = :password");
+            query.setParameter("email", email);
+            query.setParameter("password", password);
+            List<User> users = query.getResultList();
+
+            if (users.size() == 0) {
+                req.setAttribute("error", "wrong credentials");
+
+                RequestDispatcher view = req.getRequestDispatcher("authentication/login.jsp");
+                view.forward(req, resp);
+            }
+
+            resp.sendRedirect(req.getContextPath());
+
+            transaction.commit();
+        } finally {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+
+            entityManager.close();
+            entityManagerFactory.close();
         }
-
-        resp.sendRedirect(req.getContextPath());
     }
 }
