@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mb-5 position-relative">
-                    <h2 class="section-title text-center mb-5">Recent Events</h2>
+                    <h2 class="section-title text-center mb-5">Events Catalog</h2>
                 </div>
                 <%
                     ArrayList<Event> events = (ArrayList<Event>)request.getAttribute("events");
