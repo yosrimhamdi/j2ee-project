@@ -1,9 +1,10 @@
 <%@ page import="entity.Event" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<% Event event = (Event) request.getAttribute("event"); %>
 <!doctype html>
 <html lang="en">
 <head>
-    <title>New Event</title>
+    <title>Edit | <%= event.getTitle() %></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
@@ -21,14 +22,13 @@
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
                 <div class="wrap d-md-flex">
-                    <div class="img" style="background-image:url(<%= request.getContextPath() %>/assets/events/images/event.jpg)"></div>
+                    <div class="img" style="background-image:url(<%= request.getContextPath() %>/assets/events/images/teemu-paananen-bzdhc5b3Bxs-unsplash.jpg)"></div>
                     <div class="login-wrap p-4 p-md-5">
                         <div class="d-flex">
                             <div class="w-100">
-                                <h3 class="mb-4">Create new event!</h3>
+                                <h3 class="mb-4">Edit: <%= event.getTitle() %></h3>
                             </div>
                         </div>
-                        <% Event event = (Event) request.getAttribute("event"); %>
                         <form method="post" class="signin-form">
                             <input type="hidden" name="id" value="<%= event.getId() %>" />
                             <div class="form-group mb-3">
