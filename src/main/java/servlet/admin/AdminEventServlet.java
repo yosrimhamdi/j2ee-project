@@ -37,8 +37,6 @@ public class AdminEventServlet extends HttpServlet {
         event.setImageUrl(imageUrl);
         event.setOccursAt(Date.valueOf(occursAt));
 
-        DBConnection dbConnection = new DBConnection();
-
-        dbConnection.createEvent(event);
+        DBConnection.createEvent(event);
     }
 }

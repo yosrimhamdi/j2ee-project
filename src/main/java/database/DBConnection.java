@@ -40,7 +40,7 @@ public class DBConnection {
         return events;
     }
 
-    public void createEvent(Event event) {
+    public static void createEvent(Event event) {
         try{
             Class.forName ("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
