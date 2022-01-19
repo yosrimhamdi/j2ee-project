@@ -22,7 +22,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
                 <div class="wrap d-md-flex">
-                    <div class="img" style="background-image:url(<%= request.getContextPath() %>/assets/events/images/teemu-paananen-bzdhc5b3Bxs-unsplash.jpg)"></div>
+                    <div class="img" style="background-image:url(<%= event.getImageUrl() %>)"></div>
                     <div class="login-wrap p-4 p-md-5">
                         <div class="d-flex">
                             <div class="w-100">
@@ -37,7 +37,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="description">Discription</label>
-                                <textarea class="form-control" id="description" name="description" placeholder="description" required></textarea>
+                                <textarea class="form-control" id="description" name="description" placeholder="description" required><%= event.getDescription() %></textarea>
                             </div>
                             <div class="form-group mb-3">
                                 <label class="label" for="occursAt">Occurs at</label>
