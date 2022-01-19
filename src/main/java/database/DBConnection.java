@@ -61,4 +61,22 @@ public class DBConnection {
             System.out.println(e.getMessage());
         }
     }
+
+    public static void deleteEvent(Integer id) {
+        try{
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
+            PreparedStatement stmt = conn.prepareStatement("DELETE FROM events WHERE id = ?");
+
+            stmt.setInt(1, id);
+
+            stmt.executeUpdate();
+
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }
