@@ -181,7 +181,6 @@
                                 A small river named Duden flows by their place and supplies
                                 it with the necessary regelialia.
                             </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
                         </div>
                     </div>
                 </div>
@@ -204,7 +203,6 @@
                                 A small river named Duden flows by their place and supplies
                                 it with the necessary regelialia.
                             </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
                         </div>
                     </div>
                 </div>
@@ -227,7 +225,6 @@
                                 A small river named Duden flows by their place and supplies
                                 it with the necessary regelialia.
                             </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
                         </div>
                     </div>
                 </div>
