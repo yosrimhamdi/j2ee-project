@@ -20,6 +20,6 @@ public class DeleteEventServlet extends HttpServlet {
         session.setAttribute("hasToastr", true);
         session.setAttribute("toastrMessage", "Event Deleted.");
 
-        response.sendRedirect(request.getContextPath() + "/admin/events");
+        response.sendRedirect(request.getContextPath() + "/admin/dashboard");
     }
 }

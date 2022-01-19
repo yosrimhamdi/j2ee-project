@@ -44,6 +44,6 @@ public class EditEventServlet extends HttpServlet {
         session.setAttribute("hasToastr", true);
         session.setAttribute("toastrMessage", "Event Updated.");
 
-        response.sendRedirect(request.getContextPath() + "/admin/events");
+        response.sendRedirect(request.getContextPath() + "/admin/dashboard");
     }
 }

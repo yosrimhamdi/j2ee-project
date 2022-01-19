@@ -19,5 +19,6 @@
         toastr.success("<%= (String) session.getAttribute("toastrMessage") %>");
     }
 
-    <% session.invalidate(); %>
+    <% session.removeAttribute("hasToastr"); %>
+    <% session.removeAttribute("toastrMessage"); %>
 </script>

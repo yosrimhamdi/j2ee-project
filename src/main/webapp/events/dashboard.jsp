@@ -110,7 +110,7 @@
                             <td><%= event.getOccursAt() %></td>
                             <td>
                                 <a href="<%= request.getContextPath() %>/admin/events/edit?id=<%= event.getId() %>" type="button" class="button">Update</a>
-                                <a href="<%= request.getContextPath() %>/admin/events/delete?id=<%= event.getId() %>" type="button" class="button red">Delete</a>
+                                <a href="<%= request.getContextPath() %>/admin/events/delete?id=<%= event.getId() %>" type="button" class="button red" onclick="confirm('Are you sure you want to delete this event?');">Delete</a>
                             </td>
                          </tr>
                     <% } %>

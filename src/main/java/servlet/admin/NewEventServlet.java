@@ -39,6 +39,6 @@ public class NewEventServlet extends HttpServlet {
         session.setAttribute("hasToastr", true);
         session.setAttribute("toastrMessage", "Event created.");
 
-        response.sendRedirect(request.getContextPath() + "/admin/events");
+        response.sendRedirect(request.getContextPath() + "/admin/dashboard");
     }
 }
