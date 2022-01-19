@@ -39,10 +39,11 @@ public class AdminEventServlet extends HttpServlet {
 
         DBConnection.createEvent(event);
 
-        request.setAttribute("hasToastr", true);
-        request.setAttribute("toastrMessage", "Event created.");
+        HttpSession session = request.getSession();
 
-        RequestDispatcher view = request.getRequestDispatcher("/events");
-        view.forward(request, response);
+        session.setAttribute("hasToastr", true);
+        session.setAttribute("toastrMessage", "Event created.");
+
+        response.sendRedirect(request.getContextPath() + "/events");
     }
 }

@@ -20,9 +20,4 @@ public class EventServlet extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher("events/index.jsp");
         view.forward(request, response);
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doGet(req, resp);
-    }
 }
