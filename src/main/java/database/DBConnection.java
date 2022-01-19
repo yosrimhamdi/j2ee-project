@@ -14,7 +14,7 @@ public class DBConnection {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
             Statement stmt = conn.createStatement();
 
-            ResultSet rset = stmt.executeQuery("SELECT * FROM events ORDER BY occurs_at ASC");
+            ResultSet rset = stmt.executeQuery("SELECT * FROM events ORDER BY occurs_at DESC");
 
             while(rset.next()) {
                 Event event = new Event();
