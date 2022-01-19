@@ -23,7 +23,7 @@
 <body>
 <jsp:include page="../visible-header.jsp" />
 <section class="ftco-section" style="padding: 2em">
-    <div class="container" style="padding-top: 70px">
+    <div class="container" style="padding-top: 90px">
         <div class="row justify-content-center">
             <div class="col-md-7 col-lg-5">
                 <div class="wrap">
