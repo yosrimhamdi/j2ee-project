@@ -13,21 +13,17 @@
                             mr-auto
                             d-none d-lg-block
                           ">
-                        <li><a href="#about-section" class="nav-link">About</a></li>
                         <li>
-                            <a href="#blog-section" class="nav-link active">Recent Events</a>
+                            <a href="<%= request.getContextPath() %>/events" class="nav-link">Events Catalog</a>
                         </li>
                         <li>
-                            <a href="#contact-section" class="nav-link">Contact</a>
+                            <a href="<%= request.getContextPath() %>/admin/events/new" class="nav-link">New event</a>
                         </li>
                         <li>
-                            <a href="/j2ee_project_war_exploded/login" class="nav-link">Login</a>
+                            <a href="<%= request.getContextPath() %>/login" class="nav-link">Login</a>
                         </li>
                         <li>
-                            <a href="/j2ee_project_war_exploded/register" class="nav-link">Register</a>
-                        </li>
-                        <li>
-                            <a href="/j2ee_project_war_exploded/admin/events/new" class="nav-link">Create new event</a>
+                            <a href="<%= request.getContextPath() %>/register" class="nav-link">Register</a>
                         </li>
                     </ul>
                 </nav>
