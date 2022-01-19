@@ -17,7 +17,7 @@
                             <a href="<%= request.getContextPath() %>/events" class="nav-link">Events Catalog</a>
                         </li>
                         <li>
-                            <a href="<%= request.getContextPath() %>/admin/events/new" class="nav-link">New event</a>
+                            <a href="<%= request.getContextPath() %>/admin/events" class="nav-link">Events dashboard</a>
                         </li>
                         <li>
                             <a href="<%= request.getContextPath() %>/login" class="nav-link">Login</a>

@@ -1,6 +1,7 @@
 package database;
 
 import entity.Event;
+import entity.User;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -133,5 +134,36 @@ public class DBConnection {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
+    }
+
+    public static User login(String email, String password) {
+        User user = null;
+
+        try{
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
+            Statement stmt = conn.createStatement();
+
+            ResultSet rset = stmt.executeQuery("SELECT * FROM user WHERE email = ? and password = ?");
+
+            while(rset.next()) {
+                user = new User();
+
+                user.setId(rset.getInt("id"));
+                user.setEmail(rset.getString("email"));
+                user.setFirstName(rset.getString("first_name"));
+                user.setLastName(rset.getString("last_name"));
+                user.setPassword(rset.getString("password"));
+            }
+
+            rset.close();
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return user;
     }
 }
