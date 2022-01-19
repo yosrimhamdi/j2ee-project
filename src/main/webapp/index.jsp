@@ -52,15 +52,13 @@
                                     data-aos="fade-up"
                                     data-aos-delay="100"
                             >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Dignissimos magnam maxime voluptates libero, nobis impedit
-                                aut corrupti sunt possimus.
+                                Eventify brings people together through live experiences. Discover events that match your passions, or create your own with online ticketing tools.
                             </p>
                             <p data-aos="fade-up" data-aos-delay="200">
                                 <a
                                         href="<%= request.getContextPath() %>/events"
                                         class="btn smoothscroll btn-primary"
-                                >View all events</a
+                                >Events Catalog</a
                                 >
                             </p>
                         </div>

@@ -15,7 +15,7 @@
                                 d-none d-lg-block
                               ">
               <li>
-                <a href="<%= request.getContextPath() %>/events" class="nav-link">Events Catalog</a>
+                <a href="<%= request.getContextPath() %>/events" class="nav-link">Events</a>
               </li>
               <% session = request.getSession(false); %>
               <% if (session.getAttribute("isLoggedIn") == null) { %>
