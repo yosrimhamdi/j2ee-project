@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Services Free Template by Colorlib</title>
+    <title>Eventify</title>
     <meta charset="utf-8" />
     <meta
             name="viewport"
