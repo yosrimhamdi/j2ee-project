@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 
         User user = DBConnection.login(email, password);
 
-        if (user != null) {
+        if (user == null) {
             req.setAttribute("error", "wrong credentials");
 
             RequestDispatcher view = req.getRequestDispatcher("authentication/login.jsp");

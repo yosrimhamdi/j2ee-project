@@ -166,4 +166,25 @@ public class DBConnection {
 
         return user;
     }
+
+    public static void register(User user) {
+        try{
+            Class.forName ("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/j2ee_project", "root", "");
+            PreparedStatement stmt = conn.prepareStatement("INSERT INTO user(email, first_name, last_name, password) VALUES(?, ?, ?, ?)");
+
+            stmt.setString(1, user.getEmail());
+            stmt.setString(2, user.getFirstName());
+            stmt.setString(3, user.getLastName());
+            stmt.setString(4, user.getPassword());
+
+            stmt.executeUpdate();
+
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
 }

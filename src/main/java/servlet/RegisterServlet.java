@@ -1,5 +1,6 @@
 package servlet;
 
+import database.DBConnection;
 import entity.User;
 
 import javax.persistence.EntityManager;
@@ -32,28 +33,13 @@ public class RegisterServlet extends HttpServlet {
         user.setLastName(lastName);
         user.setPassword(password);
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = entityManager.getTransaction();
+        DBConnection.register(user);
 
-        try {
-            transaction.begin();
+        HttpSession session = req.getSession();
 
-            entityManager.persist(user);
+        session.setAttribute("hasToastr", true);
+        session.setAttribute("toastrMessage", "Registration succeeded, Login now.");
 
-            req.setAttribute("success", "account created");
-
-            RequestDispatcher view = req.getRequestDispatcher("authentication/login.jsp");
-            view.forward(req, resp);
-
-            transaction.commit();
-        } finally {
-            if (transaction.isActive()) {
-                transaction.rollback();
-            }
-
-            entityManager.close();
-            entityManagerFactory.close();
-        }
+        resp.sendRedirect(req.getContextPath() + "/login");
     }
 }
