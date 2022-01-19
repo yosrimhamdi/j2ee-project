@@ -65,75 +65,30 @@
                 <div class="col-12 mb-5 position-relative">
                     <h2 class="section-title text-center mb-5">Recent Events</h2>
                 </div>
-                <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
-                    <div class="blog_entry">
-                        <a href="single.html"
-                        ><img
-                                src="<%= request.getContextPath() %>/assets/home/images/xblog_1.jpg.pagespeed.ic.WLD6viXDfY.webp"
-                                alt="Image"
-                                class="img-fluid"
-                        /></a>
-                        <div class="p-4 bg-white">
-                            <h3>
-                                <a href="single.html"
-                                >A small river named Duden flows by their place</a
-                                >
-                            </h3>
-                            <span class="date">April 25, 2019</span>
-                            <p>
-                                A small river named Duden flows by their place and supplies
-                                it with the necessary regelialia.
-                            </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
+                <%
+                    ArrayList<Event> events = (ArrayList<Event>)request.getAttribute("events");
+
+                    for(Event event : events) {
+                %>
+                        <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+                            <div class="blog_entry mb-3">
+                                <a href="#"
+                                ><img
+                                        src="<%= event.getImageUrl() %>"
+                                        alt="Image"
+                                        class="img-fluid"
+                                /></a>
+                                <div class="p-4 bg-white">
+                                    <h3>
+                                        <a href="#"
+                                        ><%= event.getTitle() %></a>
+                                    </h3>
+                                    <span class="date"><%= event.getOccursAt() %></span>
+                                    <p><%= event.getDescription() %></p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
-                    <div class="blog_entry">
-                        <a href="single.html"
-                        ><img
-                                src="<%= request.getContextPath() %>/assets/home/images/xblog_2.jpg.pagespeed.ic.ptXHLVkjoQ.webp"
-                                alt="Image"
-                                class="img-fluid"
-                        /></a>
-                        <div class="p-4 bg-white">
-                            <h3>
-                                <a href="single.html"
-                                >A small river named Duden flows by their place</a
-                                >
-                            </h3>
-                            <span class="date">April 25, 2019</span>
-                            <p>
-                                A small river named Duden flows by their place and supplies
-                                it with the necessary regelialia.
-                            </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
-                    <div class="blog_entry">
-                        <a href="single.html"
-                        ><img
-                                src="<%= request.getContextPath() %>/assets/home/images/xblog_3.jpg.pagespeed.ic.BvJAi3W9-D.webp"
-                                alt="Image"
-                                class="img-fluid"
-                        /></a>
-                        <div class="p-4 bg-white">
-                            <h3>
-                                <a href="single.html"
-                                >A small river named Duden flows by their place</a
-                                >
-                            </h3>
-                            <span class="date">April 25, 2019</span>
-                            <p>
-                                A small river named Duden flows by their place and supplies
-                                it with the necessary regelialia.
-                            </p>
-                            <p class="more"><a href="single.html">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
+                <% } %>
             </div>
         </div>
     </section>
