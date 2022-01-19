@@ -20,12 +20,6 @@
     />
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-<div id="overlayer"></div>
-<div class="loader">
-    <div class="spinner-border text-primary" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-</div>
 <div class="site-wrap">
     <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
@@ -220,49 +214,6 @@
     </footer>
     <jsp:include page="../components/toastr.jsp" />
 </div>
-<script src="<%= request.getContextPath() %>/assets/home/js/jquery-3.3.1.min.js"></script>
-<script src="<%= request.getContextPath() %>/assets/home/js/jquery-ui.js+popper.min.js.pagespeed.jc.EX-s8Bt7Bv.js"></script>
-<script>
-    eval(mod_pagespeed_QsSCow0WyJ);
-</script>
-<script>
-    eval(mod_pagespeed_AuEKrLvSdQ);
-</script>
-<script src="<%= request.getContextPath() %>/assets/home/js/bootstrap.min.js"></script>
-<script src="<%= request.getContextPath() %>/assets/home/js/owl.carousel.min.js+jquery.easing.1.3.js+aos.js.pagespeed.jc.xp26CxVBPW.js"></script>
-<script>
-    eval(mod_pagespeed_gDTfE4NB3q);
-</script>
-<script>
-    eval(mod_pagespeed_9aYDEoroBv);
-</script>
-<script>
-    eval(mod_pagespeed_xOR_$VeFhT);
-</script>
-<script src="<%= request.getContextPath() %>/assets/home/js/jquery.fancybox.min.js+jquery.sticky.js.pagespeed.jc.5hu4MLknac.js"></script>
-<script>
-    eval(mod_pagespeed_3ABmRtsnyn);
-</script>
-<script>
-    eval(mod_pagespeed_c5SGAuoWdO);
-</script>
-<script src="<%= request.getContextPath() %>/assets/home/js/isotope.pkgd.min.js+main.js.pagespeed.jc.bGo_Uv6Ynq.js"></script>
-<script>
-    eval(mod_pagespeed_R8Dg4Fom58);
-</script>
-<script>
-    eval(mod_pagespeed_eZ7_rfrXAQ);
-</script>
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
-</script>
 </body>
 </html>
 
