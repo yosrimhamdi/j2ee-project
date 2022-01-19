@@ -105,6 +105,8 @@
                             <td>
                                 <% if (event.getDescription().length() > 23) {%>
                                     <%= event.getDescription().substring(0, 20) + "..." %>
+                                <% } else { %>
+                                    <%= event.getDescription() %>
                                 <% } %>
                             </td>
                             <td><%= event.getAddress() %></td>
